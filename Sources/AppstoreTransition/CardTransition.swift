@@ -54,16 +54,16 @@ public final class CardTransition: NSObject, UIViewControllerTransitioningDelega
     struct Params {
         let fromCardFrame: CGRect
         let fromCardFrameWithoutTransform: CGRect
-        let fromCell: CardCollectionViewCell
+        let fromCell: CardTableViewCell
         let settings: TransitionSettings
     }
     
-    let cell: CardCollectionViewCell
+    let cell: CardTableViewCell
     let settings: TransitionSettings
     
     public var updatedCardFrame: (()->(CGRect))?
     
-    public init(cell: CardCollectionViewCell, settings: TransitionSettings = TransitionSettings()) {
+    public init(cell: CardTableViewCell, settings: TransitionSettings = TransitionSettings()) {
         // Freeze highlighted state (or else it will bounce back)
         cell.freezeAnimations()
         

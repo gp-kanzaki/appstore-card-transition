@@ -1,5 +1,5 @@
 //
-//  CardCollectionViewCell.swift
+//  CardTableViewCell.swift
 //  Kickster
 //
 //  Created by Razvan Chelemen on 08/05/2019.
@@ -13,7 +13,7 @@ private struct AssociatedKeys {
     static var disabledHighlightedAnimationKey: UInt8 = 0
 }
 
-public protocol CardCollectionViewCell: UICollectionViewCell {
+public protocol CardTableViewCell: UITableViewCell {
     var cardContentView: UIView { get }
     var disabledHighlightedAnimation: Bool { get set }
     var settings: TransitionSettings { get }
@@ -24,7 +24,7 @@ public protocol CardCollectionViewCell: UICollectionViewCell {
     
 }
 
-public extension CardCollectionViewCell {
+public extension CardTableViewCell {
     
     var disabledHighlightedAnimation:Bool {
         get {
